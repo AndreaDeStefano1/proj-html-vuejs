@@ -2,7 +2,9 @@
   <div>
 
     <HeaderComp/>
+
     <MainComp/>
+    
     <FooterComp/>
 
   </div>
