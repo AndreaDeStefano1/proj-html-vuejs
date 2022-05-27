@@ -37,12 +37,13 @@ export default {
 
 
 .card-container{
-  border: 1px solid red;
-  margin: 10px 10px;
+  // border: 1px solid red; 
+  margin: 10px;
   .image-container{
-    height: 300px;  
+    height: 250px;  
     img{
-      width: 150px;      
+      width: 150px;
+      height: 219px;      
     }
   }
   h4{

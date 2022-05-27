@@ -38,10 +38,66 @@
         title="Beard Tidy"
         :url="require('../assets/img/avadabarbers-beardtrim-icon.png')"/>
 
-
       </div>
+
+      <ButtonComp 
+      class="text-center pt-3"
+      buttonText="READ ABOUT OUR SERVICES"/>
+
     </section>
     <!-- /SERVICE SECTION -->
+
+    <!-- PRODUCT SECTION -->
+    <section class="product-section mt-5">
+      <TitleComp 
+      class=""
+      bigText="Avada Grooming Product"
+      miniText="WE HAVE YOU COVERED"/>
+      <div class="produc-container d-flex justify-content-center pb-5">
+        <CardProductComp
+        price="18.91"
+        title="Brush"
+        :url="require('../assets/img/brush_dark.png')"/>
+        <CardProductComp
+        price="85.00"
+        title="Scissors"
+        :url="require('../assets/img/scissors.png')"/>
+        <CardProductComp
+        price="15.00"
+        title="Hot Oil"
+        :url="require('../assets/img/hot_oil_dark.png')"/>
+        <CardProductComp
+        price="30.00"
+        title="Straight Razor"
+        :url="require('../assets/img/straight_razor_dark.png')"/>
+
+      </div>
+      <ButtonComp 
+      class="text-center pt-3 pb-x"
+      buttonText="READ ABOUT OUR SERVICES"/>
+
+
+    </section>
+
+     <!-- /PRODUCT SECTION -->
+      <div class="featured-product-container d-flex">
+        <div class="image-container">
+          <img src="../assets/img/shaving_butter.png" alt="">
+        </div>
+        <div class="text-field">
+          <!-- <TitleComp
+          class=" pb-2 text-left" 
+          bigText="Shaving Butter"
+          miniText="THIS MONTH FEATURED PRODUCT"/> -->
+          <h6>THIS MONTH FEATURED PRODUCT</h6>
+          <h2>Shaving Butter</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, suscipit ratione minima quis soluta, veritatis neque aliquam numquam architecto vitae totam optio voluptatem accusamus laboriosam?</p>
+          <ButtonComp
+          buttonText="BUY NOW"/>
+        </div>
+      </div>
+     <!-- /FEATURED PRODUCT -->
+
   </main>
 </template>
 
@@ -49,12 +105,16 @@
 import ButtonComp from './ButtonComp.vue'
 import TitleComp from './TitleComp.vue'
 import CardCompServices from './CardCompServices.vue'
+import CardProductComp from './CardProductComp.vue'
+
 
 export default {
-  components: { 
-    TitleComp, 
-    ButtonComp, 
-    CardCompServices },
+  components: {
+    TitleComp,
+    ButtonComp,
+    CardCompServices,
+    CardProductComp
+},
   name: 'MainComp',
   data(){
     return{
@@ -88,11 +148,54 @@ export default {
 .intro-section{  
   background-image: url(../assets/img/avadabarbers-about-introbackground.jpg);
   background-position: 0 20%;
-  clip-path: $clip;
-    
+  clip-path: $clip; 
   .pb-x{
     padding-bottom: 300px;
   }
 }
+.product-section{
+  background-image: url(../assets/img/avadabarbers-reviewsbackground.jpg);
+  // min-height: 600px;
+  background-size: cover;
+  background-position: bottom;
+  clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 0 100%, 0 15%);
+  padding-top: 150px;
+  .pb-x{
+    padding-bottom: 200px;
+  }
+}
+
+
+.featured-product-container{
+  width: 60%;
+  height: 300px;
+  background-color: $dark-block-color;
+  border-color: 1px solid red;
+  transform: translateY(-60px);
+  margin: 0 auto;
+  border-top: 4px solid $primary-color;
+  .image-container{
+    width: 300px;
+    height: 296px;
+    background-image: url(../assets/img/avadabarbers-cta-background.jpg);
+    background-position: center;
+    background-size: cover;
+    img{
+      width: 240px;
+      margin: 40px 40px;
+    }
+  }
+  .text-field{
+    padding: 20px;
+    h6{
+      color: $primary-color;
+    }
+    h2{
+      color: $secondary-color;
+      font-size: 3em;
+    }
+  }
+}
+
 
 </style>
