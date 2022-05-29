@@ -1,5 +1,5 @@
 <template>
-  <div class=" text-center">
+  <div class=" ">
     <h6>{{miniText}}</h6>
     <h2>{{bigText}}</h2>
   </div>

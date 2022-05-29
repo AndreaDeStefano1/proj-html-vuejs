@@ -3,7 +3,7 @@
 
     <div class="img-&-title d-flex flex-column ">
 
-      <div class="image-container text-center">
+      <div class="image-container text-center mt-5">
         <img  :src="url" alt="">
       </div>
       
@@ -40,10 +40,10 @@ export default {
   // border: 1px solid red; 
   margin: 10px;
   .image-container{
-    height: 250px;  
+    height: 150px;  
     img{
-      width: 150px;
-      height: 219px;      
+      width: 70px;
+
     }
   }
   h4{

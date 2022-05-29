@@ -3,11 +3,11 @@
     <!-- INTRO SECTION -->
     <section class="intro-section pt-5">
       <TitleComp 
-      class="mt-5"
+      class=" text-center"
       bigText="Pro Barbers"
       miniText="AWARD WINNING"/>
       <ButtonComp 
-      class="text-center pb-x"
+      class="text-center pb-x mt-5"
       buttonText="MEET YOUR NEW BARBER"/>
       
     </section>
@@ -16,7 +16,7 @@
     <!-- SERVICE SECTION -->
     <section>
       <TitleComp 
-      class="mt-5"
+      class="mt-5 text-center"
       bigText="Services"
       miniText="MENS GROOMING"/>
       <div class="container d-flex justify-content-center">
@@ -50,10 +50,10 @@
     <!-- PRODUCT SECTION -->
     <section class="product-section mt-5">
       <TitleComp 
-      class=""
+      class=" text-center"
       bigText="Avada Grooming Product"
       miniText="WE HAVE YOU COVERED"/>
-      <div class="produc-container d-flex justify-content-center pb-5">
+      <div class="produc-container d-flex justify-content-center py-5 ">
         <CardProductComp
         price="18.91"
         title="Brush"
@@ -85,12 +85,10 @@
           <img src="../assets/img/shaving_butter.png" alt="">
         </div>
         <div class="text-field">
-          <!-- <TitleComp
-          class=" pb-2 text-left" 
+          <TitleComp
+          class=" pb-2 " 
           bigText="Shaving Butter"
-          miniText="THIS MONTH FEATURED PRODUCT"/> -->
-          <h6>THIS MONTH FEATURED PRODUCT</h6>
-          <h2>Shaving Butter</h2>
+          miniText="THIS MONTH FEATURED PRODUCT"/>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, suscipit ratione minima quis soluta, veritatis neque aliquam numquam architecto vitae totam optio voluptatem accusamus laboriosam?</p>
           <ButtonComp
           buttonText="BUY NOW"/>
@@ -147,10 +145,10 @@ export default {
 
 .intro-section{  
   background-image: url(../assets/img/avadabarbers-about-introbackground.jpg);
-  background-position: 0 20%;
+  background-position: 0 25%;
   clip-path: $clip; 
   .pb-x{
-    padding-bottom: 300px;
+    padding-bottom: 150px;
   }
 }
 .product-section{
@@ -158,10 +156,10 @@ export default {
   // min-height: 600px;
   background-size: cover;
   background-position: bottom;
-  clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 0 100%, 0 15%);
+  clip-path: polygon(50% 0%, 100% 10%, 100% 100%, 0 100%, 0 10%);
   padding-top: 150px;
   .pb-x{
-    padding-bottom: 200px;
+    padding-bottom: 120px;
   }
 }
 
