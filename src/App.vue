@@ -29,12 +29,15 @@ export default {
 
 <style lang="scss">
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
-@import '~@fontsource/bodoni-moda/index.css';
-@import '~@fontsource/bodoni-moda/800.css';
+
+@import '~@fontsource/abril-fatface/index.css';
+@import './assets/style/vars';
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
 
 
-body{
-  font-family: "Bodoni Moda", serif;
+
+.title-font{
+  font-family: $title-font;
  }
 
 </style>

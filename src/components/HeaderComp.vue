@@ -3,7 +3,7 @@
 
     <NavbarComp class=" pt-4"/>
     <div class="container flex-grow-1 d-flex flex-column justify-content-center text-light position-relative">
-      <h1>Barber Shop</h1>
+      <h1 class="title-font">Barber Shop</h1>
       <div class="divider my-3"></div>
       <span class="mt-2">
         The Pinnacle of Male Grooming

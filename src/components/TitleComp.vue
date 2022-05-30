@@ -1,7 +1,7 @@
 <template>
   <div class=" ">
-    <h6>{{miniText}}</h6>
-    <h2>{{bigText}}</h2>
+    <h6 class="">{{miniText}}</h6>
+    <h2 class="title-font">{{bigText}}</h2>
   </div>
 </template>
 

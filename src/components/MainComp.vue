@@ -21,11 +21,11 @@
       miniText="MENS GROOMING"/>
       <div class="container d-flex justify-content-center">
 
-        <!-- <CardComp v-for="(service, index) in serviceCardsArray" :key="`card${index}`"
+        <CardCompServices v-for="(service, index) in serviceCardsArray" :key="`card${index}`"
         :text="service.text"
         :title="service.title"
-        :url="service.url"/> -->
-        <CardCompServices 
+        :url="service.url"/>
+        <!-- <CardCompServices 
         text="Avada Barbers are experts in the lickety split trim and air cut. Quick but careful and ridiculously good looking."
         title="Trim & Cut"
         :url="require('../assets/img/avadabarbers-trimcut-icon-before.png')"/>
@@ -36,7 +36,7 @@
         <CardCompServices 
         text="Tame the tangles and untidy facial hairs like a gentleman with our Beard Tidy services from Avada Barbers."
         title="Beard Tidy"
-        :url="require('../assets/img/avadabarbers-beardtrim-icon.png')"/>
+        :url="require('../assets/img/avadabarbers-beardtrim-icon.png')"/> -->
 
       </div>
 
@@ -170,17 +170,17 @@ export default {
         {
           text: "Avada Barbers are experts in the lickety split trim and air cut. Quick but careful and ridiculously good looking.",
           title: "Trim & Cut",
-          url: "../assets/img/avadabarbers-trimcut-icon-before.png"
+          url: require("../assets/img/avadabarbers-trimcut-icon-before.png")
         },
         {
-          text: "Avada Barbers are experts in the lickety split trim and air cut. Quick but careful and ridiculously good looking.",
-          title: "Trim & Cut",
-          url: "../assets/img/avadabarbers-trimcut-icon-before.png"
+          text: "Take a seat in our fine leather chairs, lean back and let us lather you a fresh head in a luxurious fashion.",
+          title: "Wash & Dry",
+          url: require("../assets/img/avadabarbers-washndry-icon.png")
         },
         {
-          text: "Avada Barbers are experts in the lickety split trim and air cut. Quick but careful and ridiculously good looking.",
-          title: "Trim & Cut",
-          url: "../assets/img/avadabarbers-trimcut-icon-before.png"
+          text: "Tame the tangles and untidy facial hairs like a gentleman with our Beard Tidy services from Avada Barbers.",
+          title: "Beard Tidy",
+          url: require("../assets/img/avadabarbers-beardtrim-icon.png")
         }
       ]
     }
@@ -192,11 +192,11 @@ export default {
 @import '../assets/style/vars';
 
 
-
 .intro-section{  
   background-image: url(../assets/img/avadabarbers-about-introbackground.jpg);
-  background-position: 0 25%;
+  // background-position: 0 10%;
   clip-path: polygon(100% 0, 100% 100%, 50% 90%, 0 100%, 0 0); 
+  background-size: 700px 700px;
   .pb-x{
     padding-bottom: 150px;
   }
@@ -243,10 +243,6 @@ export default {
       font-size: 3em;
     }
   }
-}
-
-.reviews-section{
-
 }
 
 .blog-section{

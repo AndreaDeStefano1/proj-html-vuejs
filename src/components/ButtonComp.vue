@@ -29,4 +29,20 @@ button{
     font-weight: 500;
   }
 }
+
+.btn-outline-secondary:hover {
+    /* color: #fff; */
+  background-color: transparent; 
+  border-color: darken($primary-color, 10%) ; 
+
+  & > span{
+  color: darken($primary-color, 10%);  
+  }
+}
+
+
+button:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+
 </style>

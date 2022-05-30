@@ -7,7 +7,7 @@
         <img class=" img-fluid " :src="url" alt="">
       </div>
       
-      <h4 class=" text-center">{{title}}</h4>
+      <h4 class=" text-center title-font">{{title}}</h4>
 
     </div>
 
