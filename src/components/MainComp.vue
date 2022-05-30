@@ -80,7 +80,7 @@
     </section>
 
      <!-- /PRODUCT SECTION -->
-      <div class="featured-product-container d-flex">
+      <section class="featured-product-container d-flex">
         <div class="image-container">
           <img src="../assets/img/shaving_butter.png" alt="">
         </div>
@@ -93,8 +93,56 @@
           <ButtonComp
           buttonText="BUY NOW"/>
         </div>
-      </div>
+      </section>
      <!-- /FEATURED PRODUCT -->
+
+     <!-- REVIEWES -->
+     <section class="reviews-section">
+
+      <TitleComp
+        class=" pb-2 text-center" 
+        bigText="Reviews"
+        miniText="WHAT PEOPLE SAY "/>
+
+        <div class="container d-flex justify-content-center pb-5">
+
+          <CardCompReviews
+          class=" flex-column-reverse cerchio"
+          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestias veritatis corporis laudantium? Cupiditate, voluptatibus aspernatur asperiores quas, laboriosam repellendus mollitia vitae obcaecati sapiente tempore labore. Vitae in nam aut?"
+          title="Jhon Doe"
+          :url="require('../assets/img/avadabarbers-trimcut-gallery6-400x400.jpg')"/>
+          
+          <CardCompReviews
+          class=" flex-column-reverse cerchio"
+          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestias veritatis corporis laudantium? Cupiditate, voluptatibus aspernatur asperiores quas, laboriosam repellendus mollitia vitae obcaecati sapiente tempore labore. Vitae in nam aut?"
+          title="Pete Jones"
+          :url="require('../assets/img/avadabarbers-trimcut-gallery7-400x402.jpg')"/>
+          
+          <CardCompReviews
+          class=" flex-column-reverse cerchio"
+          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestias veritatis corporis laudantium? Cupiditate, voluptatibus aspernatur asperiores quas, laboriosam repellendus mollitia vitae obcaecati sapiente tempore labore. Vitae in nam aut?"
+          title="Mark Wilson"
+          :url="require('../assets/img/avadabarbers-trimcut-gallery3-400x402.jpg')"/>
+
+        </div>        
+
+     </section>
+     <!-- /REVIEWES -->
+
+     <!-- BLOG -->
+     <section class="blog-section">
+
+       <TitleComp
+        class=" pt-5 pb-2 text-center" 
+        bigText="Recent Blog Posts"
+        miniText="TALES FROM THE BARBER SHOP"/>
+
+       <div class="container">
+
+       </div>
+
+     </section>
+
 
   </main>
 </template>
@@ -103,6 +151,7 @@
 import ButtonComp from './ButtonComp.vue'
 import TitleComp from './TitleComp.vue'
 import CardCompServices from './CardCompServices.vue'
+import CardCompReviews from './CardCompReviews.vue'
 import CardProductComp from './CardProductComp.vue'
 
 
@@ -111,7 +160,8 @@ export default {
     TitleComp,
     ButtonComp,
     CardCompServices,
-    CardProductComp
+    CardProductComp,
+    CardCompReviews
 },
   name: 'MainComp',
   data(){
@@ -195,5 +245,12 @@ export default {
   }
 }
 
+.reviews-section{
 
+}
+
+.blog-section{
+  clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 100%, 0 0);
+  background-color: #f5f5f5;
+}
 </style>

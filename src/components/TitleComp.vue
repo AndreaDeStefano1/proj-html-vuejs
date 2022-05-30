@@ -25,6 +25,7 @@ div{
   h2{
     color: $secondary-color;
     font-size: 3em;
+    font-weight: 800;
   }
 }
 
