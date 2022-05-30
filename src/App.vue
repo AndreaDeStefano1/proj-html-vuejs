@@ -29,10 +29,12 @@ export default {
 
 <style lang="scss">
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
-// @import '../node_modules/@fontsource/bodoni-moda';
+@import '~@fontsource/bodoni-moda/index.css';
+@import '~@fontsource/bodoni-moda/800.css';
 
-// body{
-//   font-family: "Bodoni Moda", serif;
-// }
+
+body{
+  font-family: "Bodoni Moda", serif;
+ }
 
 </style>

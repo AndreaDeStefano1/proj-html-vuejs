@@ -42,6 +42,7 @@ header{
   min-height: 700px;
   h1{
     font-size: 70px;
+    font-weight: 800;
   }
   .divider{
     height: 4px;

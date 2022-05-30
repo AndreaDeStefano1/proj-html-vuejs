@@ -146,7 +146,7 @@ export default {
 .intro-section{  
   background-image: url(../assets/img/avadabarbers-about-introbackground.jpg);
   background-position: 0 25%;
-  clip-path: $clip; 
+  clip-path: polygon(100% 0, 100% 100%, 50% 90%, 0 100%, 0 0); 
   .pb-x{
     padding-bottom: 150px;
   }

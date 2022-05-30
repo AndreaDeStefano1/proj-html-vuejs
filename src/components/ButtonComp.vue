@@ -22,6 +22,7 @@ export default {
 button{
   border-radius: 0;
   border-color: $primary-color;
+  border-width: 3px;
   padding: 10px 25px;
   & > span{
     color: $primary-color ;

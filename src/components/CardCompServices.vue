@@ -4,7 +4,7 @@
     <div class="img-&-title d-flex flex-column ">
 
       <div class="image-container text-center mt-5">
-        <img  :src="url" alt="">
+        <img class=" img-fluid " :src="url" alt="">
       </div>
       
       <h4 class=" text-center">{{title}}</h4>
@@ -37,8 +37,9 @@ export default {
 
 
 .card-container{
-  // border: 1px solid red; 
+  //border: 1px solid red; 
   margin: 10px;
+  width: 300px;
   .image-container{
     height: 150px;  
     img{
