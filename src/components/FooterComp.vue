@@ -12,9 +12,9 @@
       </div>
 
 
-      <div class="d-flex flex-column  py-5">
+      <div class="footer-info d-flex flex-column  py-5">
         <img src="../assets/img/avadabarbers-logo-x2-200x70.png" alt="">
-        <p class="text-center text-light pt-5">
+        <p class="text-center pt-5">
          Avada Barbers<br>123New York Street<br>New York City<br>info@yourwewbsite.com<br>+1 (555) 555-1212
         </p>
         <h3 class="text-center pt-5">FOLLOW US</h3>
@@ -73,7 +73,6 @@ export default {
 @import '../assets/style/vars';
 
 footer{
-
   width: 100%;
   background-color: $dark-block-color;
   h3{
@@ -88,11 +87,17 @@ footer{
       }
     }
   }
+  .footer-info p{
+  color: gray;
+
+  }
   .footer-bottom{
     height: 100px;
-    background-color: lighten($dark-block-color, 10%);
+    background-color: lighten($dark-block-color, 3%);
+    
     p{
       line-height: 100px;
+      color: gray;
     }
   }
 }

@@ -240,9 +240,8 @@ export default {
 
 .intro-section{  
   background-image: url(../assets/img/avadabarbers-about-introbackground.jpg);
-  // background-position: 0 10%;
-  clip-path: polygon(100% 0, 100% 100%, 50% 90%, 0 100%, 0 0); 
-  background-size: 700px 700px;
+  background-position: 0 24%;
+  clip-path: polygon(100% 0, 100% 100%, 50% 75%, 0 100%, 0 0); 
   .pb-x{
     padding-bottom: 150px;
   }
@@ -261,7 +260,7 @@ export default {
 
 
 .featured-product-container{
-  width: 60%;
+  width: 43%;
   height: 300px;
   background-color: $dark-block-color;
   border-color: 1px solid red;
@@ -292,7 +291,7 @@ export default {
 }
 
 .blog-section{
-  clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 100%, 0 0);
+  clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
   background-color: #f5f5f5;
   padding-top: 150px;
 }
