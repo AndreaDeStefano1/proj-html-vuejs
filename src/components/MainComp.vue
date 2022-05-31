@@ -54,23 +54,12 @@
       bigText="Avada Grooming Product"
       miniText="WE HAVE YOU COVERED"/>
       <div class="produc-container d-flex justify-content-center py-5 ">
-        <CardProductComp
-        price="18.91"
-        title="Brush"
-        :url="require('../assets/img/brush_dark.png')"/>
-        <CardProductComp
-        price="85.00"
-        title="Scissors"
-        :url="require('../assets/img/scissors.png')"/>
-        <CardProductComp
-        price="15.00"
-        title="Hot Oil"
-        :url="require('../assets/img/hot_oil_dark.png')"/>
-        <CardProductComp
-        price="30.00"
-        title="Straight Razor"
-        :url="require('../assets/img/straight_razor_dark.png')"/>
 
+        <CardProductComp v-for="(item, index) in shopProductArray" :key="`item-${index}`"
+        :price="item.price"
+        :title="item.itemName"
+        :url="item.img"/>       
+ 
       </div>
       <ButtonComp 
       class="text-center pt-3 pb-x"
@@ -111,7 +100,6 @@
           :text="review.text"
           :title="review.author"
           :url="review.url"/>
-
 
         </div>        
 
@@ -217,6 +205,28 @@ export default {
           text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestias veritatis corporis laudantium? Cupiditate, voluptatibus aspernatur asperiores quas, laboriosam repellendus mollitia vitae obcaecati sapiente tempore labore. Vitae in nam aut?',
           author: 'Mark Wilson',
           url: require('../assets/img/avadabarbers-trimcut-gallery3-400x402.jpg')
+        },
+      ],
+      shopProductArray: [
+        {
+          itemName: 'Brush',
+          price: '18.91',
+          img: require('../assets/img/brush_dark.png')
+        },
+        {
+          itemName: 'Scissors',
+          price: '85.00',
+          img: require('../assets/img/scissors.png')
+        },
+        {
+          itemName: 'Hot Oil',
+          price: '15.00',
+          img: require('../assets/img/hot_oil_dark.png')
+        },
+        {
+          itemName: 'Straight Razor',
+          price: '30.00',
+          img: require('../assets/img/straight_razor_dark.png')
         },
       ]
     }
