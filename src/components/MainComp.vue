@@ -106,23 +106,12 @@
 
         <div class="container d-flex justify-content-center pb-5">
 
-          <CardCompReviews
-          class=" flex-column-reverse cerchio"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestias veritatis corporis laudantium? Cupiditate, voluptatibus aspernatur asperiores quas, laboriosam repellendus mollitia vitae obcaecati sapiente tempore labore. Vitae in nam aut?"
-          title="Jhon Doe"
-          :url="require('../assets/img/avadabarbers-trimcut-gallery6-400x400.jpg')"/>
-          
-          <CardCompReviews
-          class=" flex-column-reverse cerchio"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestias veritatis corporis laudantium? Cupiditate, voluptatibus aspernatur asperiores quas, laboriosam repellendus mollitia vitae obcaecati sapiente tempore labore. Vitae in nam aut?"
-          title="Pete Jones"
-          :url="require('../assets/img/avadabarbers-trimcut-gallery7-400x402.jpg')"/>
-          
-          <CardCompReviews
-          class=" flex-column-reverse cerchio"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestias veritatis corporis laudantium? Cupiditate, voluptatibus aspernatur asperiores quas, laboriosam repellendus mollitia vitae obcaecati sapiente tempore labore. Vitae in nam aut?"
-          title="Mark Wilson"
-          :url="require('../assets/img/avadabarbers-trimcut-gallery3-400x402.jpg')"/>
+          <CardCompReviews v-for="(review, index) in reviewsArray" :key="`review${index}`"
+          class=" flex-column-reverse "
+          :text="review.text"
+          :title="review.author"
+          :url="review.url"/>
+
 
         </div>        
 
@@ -130,16 +119,27 @@
      <!-- /REVIEWES -->
 
      <!-- BLOG -->
-     <section class="blog-section">
+     <section class="blog-section ">
 
-       <TitleComp
-        class=" pt-5 pb-2 text-center" 
-        bigText="Recent Blog Posts"
-        miniText="TALES FROM THE BARBER SHOP"/>
+      <TitleComp
+      class=" pt-5 pb-2 text-center" 
+      bigText="Recent Blog Posts"
+      miniText="TALES FROM THE BARBER SHOP"/>
 
-       <div class="container">
+      <div class="container d-flex">
+         
+        <CardBlogComp
+        class="pt-5"
+        v-for="(blog,index) in blogPostArray" :key="`blog${index}`"
+        :postImageUrl="blog.url"
+        :postText="blog.text"
+        :postTitle="blog.title"/>
 
-       </div>
+      </div>
+
+      <ButtonComp
+      class="text-center pb-5"
+      buttonText="READ MORE FROM OUR BLOG"/>
 
      </section>
 
@@ -153,6 +153,7 @@ import TitleComp from './TitleComp.vue'
 import CardCompServices from './CardCompServices.vue'
 import CardCompReviews from './CardCompReviews.vue'
 import CardProductComp from './CardProductComp.vue'
+import CardBlogComp from './CardBlogComp.vue'
 
 
 export default {
@@ -161,12 +162,13 @@ export default {
     ButtonComp,
     CardCompServices,
     CardProductComp,
-    CardCompReviews
+    CardCompReviews,
+    CardBlogComp
 },
   name: 'MainComp',
   data(){
     return{
-      serviceCardsArray :[
+      serviceCardsArray: [
         {
           text: "Avada Barbers are experts in the lickety split trim and air cut. Quick but careful and ridiculously good looking.",
           title: "Trim & Cut",
@@ -182,6 +184,40 @@ export default {
           title: "Beard Tidy",
           url: require("../assets/img/avadabarbers-beardtrim-icon.png")
         }
+      ],
+      blogPostArray: [
+        {
+          title: 'Avada Barbers Now Open',
+          text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem mollitia assumenda aspernatur maiores quo.',
+          url: require('../assets/img/avadabarbers-second-blog-700x441.jpg')
+        },
+        {
+          title: 'Choosing The Right Barber',
+          text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem mollitia assumenda aspernatur maiores quo.',
+          url: require('../assets/img/avadabarbers-choosing-blog-700x441.jpg')
+        },
+        {
+          title: 'Quick Service Guide',
+          text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem mollitia assumenda aspernatur maiores quo.',
+          url: require('../assets/img/avadabarbers-ourservice-blog-700x441.jpg')
+        },
+      ],
+      reviewsArray: [
+        {
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestias veritatis corporis laudantium? Cupiditate, voluptatibus aspernatur asperiores quas, laboriosam repellendus mollitia vitae obcaecati sapiente tempore labore. Vitae in nam aut?',
+          author: 'Jhon Doe',
+          url: require('../assets/img/avadabarbers-trimcut-gallery6-400x400.jpg')
+        },
+        {
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestias veritatis corporis laudantium? Cupiditate, voluptatibus aspernatur asperiores quas, laboriosam repellendus mollitia vitae obcaecati sapiente tempore labore. Vitae in nam aut?',
+          author: 'Pete Jones',
+          url: require('../assets/img/avadabarbers-trimcut-gallery7-400x402.jpg')
+        },
+        {
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestias veritatis corporis laudantium? Cupiditate, voluptatibus aspernatur asperiores quas, laboriosam repellendus mollitia vitae obcaecati sapiente tempore labore. Vitae in nam aut?',
+          author: 'Mark Wilson',
+          url: require('../assets/img/avadabarbers-trimcut-gallery3-400x402.jpg')
+        },
       ]
     }
   }
@@ -248,5 +284,6 @@ export default {
 .blog-section{
   clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 100%, 0 0);
   background-color: #f5f5f5;
+  padding-top: 150px;
 }
 </style>

@@ -50,8 +50,8 @@
     </div>
     <!-- /footer top -->
     <!-- footer bottom -->
-    <div class="footer-bottom">
-
+    <div class="footer-bottom text-light">
+      <p class="text-center">&copy; Copyright 2012-2020 | Avada Theme by ThemeFusion | All Rights Reserved | Powered by Boolean</p>
     </div>
 
 
@@ -89,8 +89,11 @@ footer{
     }
   }
   .footer-bottom{
-    height: 150px;
+    height: 100px;
     background-color: lighten($dark-block-color, 10%);
+    p{
+      line-height: 100px;
+    }
   }
 }
 </style>

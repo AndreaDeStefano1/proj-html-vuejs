@@ -29,7 +29,6 @@ export default {
 
 <style lang="scss">
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
-
 @import '~@fontsource/abril-fatface/index.css';
 @import './assets/style/vars';
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
