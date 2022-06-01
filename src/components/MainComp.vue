@@ -260,7 +260,7 @@ export default {
 
 
 .featured-product-container{
-  width: 43%;
+  width: 53%;
   height: 300px;
   background-color: $dark-block-color;
   border-color: 1px solid red;
